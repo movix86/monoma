@@ -20,6 +20,4 @@ Route::get('/', function () {
 
 
 #Route::post('/register', [AuthController::class, 'register']);
-Route::post('/api/test', [UserController::class, 'test_json']);
 Route::post('/api/register', [UserController::class, 'register']);
-Route::post('/api/test_data', [UserController::class, 'test_data']);

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use Illuminate\Auth\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ Route::group([
     Route::post('me', [AuthController::class, 'me']);
 
     Route::post('candidate/lead', [UserController::class, 'candidate']);
-    Route::get('candidate/lead/{id?}', [UserController::class, 'getCandidate']);
-    Route::get('candidate/leads', [UserController::class, 'getCandidates']);
+    Route::get('candidate/lead/{id?}', [UserController::class, 'getCandidate'])->middleware(['auth']);
+    Route::get('candidate/leads', [UserController::class, 'getCandidates'])->middleware(['auth']);
 
 });
