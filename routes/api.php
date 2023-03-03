@@ -31,9 +31,8 @@ Route::group([
     Route::post('refresh', [AuthController::class, 'refresh']);
     Route::post('me', [AuthController::class, 'me']);
 
-    Route::post('candidate/create', [UserController::class, 'candidate']);
+    Route::post('candidate/lead', [UserController::class, 'candidate']);
     Route::get('candidate/lead/{id?}', [UserController::class, 'getCandidate']);
     Route::get('candidate/leads', [UserController::class, 'getCandidates']);
-    Route::post('test', [AuthController::class, 'test']);
 
 });
