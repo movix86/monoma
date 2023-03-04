@@ -1,13 +1,13 @@
 
 <p>Endpoints</p>
-<p align="center">RegisterToken User: https://monoma.juanwebdeveloper.com/api/register</p>
-<p align="center">Login: https://monoma.juanwebdeveloper.com/api/auth/login</p>
-<p align="center">Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead</p>
-<p align="center">Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead/{id?}</p>
-<p align="center">Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
+<p>RegisterToken User: https://monoma.juanwebdeveloper.com/api/register</p>
+<p>Login: https://monoma.juanwebdeveloper.com/api/auth/login</p>
+<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead</p>
+<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead/{id?}</p>
+<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
 <br>
-<p>manager: Sarina</p>
-<p>Pass manager: password</p>
+<p><strong>manager:</strong> Sarina</p>
+<p><strong>Pass manager:</strong> password</p>
 <br>
-<p>Agent: Lisette</p>
-<p>Pass agent: password</p>
+<p><strong>Agent:</strong> Lisette</p>
+<p><strong>Pass agent:</strong> password</p>
