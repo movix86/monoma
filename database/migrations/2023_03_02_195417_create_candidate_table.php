@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('source');
             $table->integer('owner');
             //$table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            //$table->timestamp('email_verified_at')->nullable();
             $table->integer('created_by');
             $table->rememberToken();
             $table->timestamps();

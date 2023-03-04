@@ -28,10 +28,10 @@ class UserController extends Controller
         }
 
         $d = User::create([
-            'username'=>$request['username'],
-            'password' => Hash::make($request['password']),
-            'is_active'=>$request['is_active'],
-            'role'=>$request['role'],
+            'username'=>trim($request['username']),
+            'password' => trim(Hash::make($request['password'])),
+            'is_active'=>trim($request['is_active']),
+            'role'=>trim($request['role']),
         ]);
         return response()->json($msg->msgResponse($d, []));
     }
@@ -57,9 +57,9 @@ class UserController extends Controller
         }else{
             if (!empty($request->all())) {
                 $d = Candidate::create([
-                    'name'=>$request->input('name'),
-                    'source'=>$request->input('source'),
-                    'owner'=>$request->input('owner'),
+                    'name'=>trim($request->input('name')),
+                    'source'=>trim($request->input('source')),
+                    'owner'=>trim($request->input('owner')),
                     'created_by'=>Auth::user()->id,
                 ]);
             }
@@ -80,23 +80,36 @@ class UserController extends Controller
     public function getCandidate($id = null){
         $msg = new MsgResponse;
         if ($id==null) {
-            return response()->json([
-                "message" => "No hay id"
-            ], 404);
+            return response()->json($msg->msgResponse([], ['No hay id']));
+        }
+        if(!Auth::check()){
+            return response()->json($msg->msgResponse([], ['Debe loguearse']));
         }
 
-        $candidate = Candidate::find($id);
+        if(Auth::user()->role != 'manager'){
+            $candidate = Candidate::where([['id', $id],['owner', Auth::user()->id]])->get();
+        }else{
+            $candidate = Candidate::find($id);
+        }
         if ($candidate) {
             return response()->json($msg->msgResponse($candidate, []));
         }else{
-            return response()->json($msg->msgResponse([], ['No se encuentra un candidato con el id suministrado']));
+            return response()->json($msg->msgResponse([], ['No hay registros en la BD']));
         }
     }
 
     public function getCandidates(){
         $msg = new MsgResponse;
-        $candidate = Candidate::all();
-        if ($candidate) {
+        if(!Auth::check()){
+            return response()->json($msg->msgResponse([], ['Debe loguearse']));
+        }
+        if(Auth::user()->role != 'manager'){
+            $candidate = User::find(Auth::user()->id)->getCandidates;
+        }else{
+            $candidate = Candidate::all();
+        }
+        //dd(count($candidate));
+        if (count($candidate) > 0) {
             return response()->json($msg->msgResponse($candidate, []));
         }else{
             return response()->json($msg->msgResponse([], ['No se encuentran candidatos registrados']));

@@ -86,8 +86,4 @@ class AuthController extends Controller
         ]);
     }
 
-    public function test(){
-        dd(Auth::user());
-        return response()->json('Hola desde test Api');
-    }
 }
