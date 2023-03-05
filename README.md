@@ -20,9 +20,9 @@
 </p>
 <br>
 <br>
-<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead</p>
-<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead/{id?}</p>
-<p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
+<p>Create candidate: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead</p>
+<p>Find candidate: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead/{id?}</p>
+<p>All candidates: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
 <br>
 <p><strong>Endpoint extra New User for Login:</strong></p>
 <p>RegisterToken User: https://monoma.juanwebdeveloper.com/api/register</p>
