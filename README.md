@@ -38,6 +38,6 @@
 <strong>Factorys:</strong><br>
 #1 exec first: <br>
 php artisan db:seed --class=UserTableSeeder <br>
-#2 exec first: <br>
+#2 exec second: <br>
 php artisan db:seed --class=CandidateTableSeeder
 </p>
