@@ -1,5 +1,6 @@
 
-<p><strong>Endpoints:</strong></p>
+<p><strong>Endpoints:</strong></p><br>
+<p>In postma: Content-Type: application/json</p><br>
 <p>*Token Login: https://monoma.juanwebdeveloper.com/api/auth/login</p>
 <br>
 <p><strong>Credential:</strong></p>
@@ -33,7 +34,15 @@
 <p>*All candidates: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
 <br>
 <p><strong>Endpoint extra New User for Login:</strong></p>
-<p>RegisterToken User: https://monoma.juanwebdeveloper.com/api/register</p>
+<p>RegisterToken User: https://monoma.juanwebdeveloper.com/api/register
+<br>
+{
+    "username": "Jairo",
+    "password": "12345678",
+    "is_active": "true",
+    "role": "agent"
+}
+</p>
 <br>
 <p>
 <strong>Factorys:</strong><br>
