@@ -6,13 +6,18 @@
 <p><strong>manager:</strong> Ellen</p>
 <p>
 {
-    "username": "Jaren",
+    "username": "Ellen",
     "password": "password"
 }
 </p>
 <br>
 <p><strong>Agent:</strong> Jaren</p>
-<p><strong>Pass agent:</strong> password</p>
+<p>
+{
+    "username": "Jaren",
+    "password": "password"
+}
+</p>
 <br>
 <br>
 <p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead</p>
