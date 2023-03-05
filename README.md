@@ -7,8 +7,8 @@
 <p>Crear candidato: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
 <br>
 <p><strong>Credenciales</strong></p>
-<p><strong>manager:</strong> Sarina</p>
+<p><strong>manager:</strong> Ellen</p>
 <p><strong>Pass manager:</strong> password</p>
 <br>
-<p><strong>Agent:</strong> Lisette</p>
+<p><strong>Agent:</strong> Jaren</p>
 <p><strong>Pass agent:</strong> password</p>
