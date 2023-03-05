@@ -1,6 +1,6 @@
 
 <p><strong>Endpoints:</strong></p><br>
-<p>In postma: Content-Type: application/json</p><br>
+<p>In postman: Content-Type: application/json</p><br>
 <p>*Token Login: https://monoma.juanwebdeveloper.com/api/auth/login</p>
 <br>
 <p><strong>Credential:</strong></p>
