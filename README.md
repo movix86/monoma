@@ -26,3 +26,11 @@
 <br>
 <p><strong>Endpoint extra New User for Login:</strong></p>
 <p>RegisterToken User: https://monoma.juanwebdeveloper.com/api/register</p>
+<br>
+<p>
+<strong>Factorys:</strong><br>
+#1 exec first: <br>
+php artisan db:seed --class=UserTableSeeder <br>
+#2 exec first: <br>
+php artisan db:seed --class=CandidateTableSeeder
+</p>
