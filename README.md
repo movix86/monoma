@@ -28,6 +28,7 @@
     "owner": 1
 }
 </p><br>
+<strong>You need to login to view the record(Debe loguearse para ver registros):</strong><br>
 <p>*Find candidate: https://monoma.juanwebdeveloper.com/api/auth/candidate/lead/{id?}</p>
 <p>*All candidates: https://monoma.juanwebdeveloper.com/api/auth/candidate/leads</p>
 <br>
