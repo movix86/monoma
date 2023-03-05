@@ -15,14 +15,21 @@ class JsonMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        //$request->header('Content-Type') == 'application/json'
-        
+        //URL Except
+        $uriExcept=[
+            '/api/auth/candidate/lead/',
+            '/api/auth/candidate/leads',
+        ];
         if ($request->header('Content-Type') != 'application/json') 
         {
-            return response()->json([
-                'success'=> 'false',
-                'message' => 'Do not have authorization'
-            ], 404);   
+            foreach ($uriExcept as $value) {
+                if (!strrchr($request->getRequestUri(), $value)) {
+                    return response()->json([
+                        'success'=> 'false',
+                        'message' => 'Do not have authorization'
+                    ], 404);
+                }
+            }
         }
         
         return $next($request);
